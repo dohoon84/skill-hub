@@ -96,8 +96,7 @@
       "name": "youtube",
       "description": "YouTube Data API v3 기반 동영상 검색, 채널/동영상 상세 정보, 트렌딩, 댓글, 재생목록 조회",
       "tags": ["video", "youtube", "media", "search"],
-      "auth": "api_key",
-      "requires_env": ["YOUTUBE_API_KEY"]
+      "auth": "google_oauth"
     }
   ],
   "apps": [

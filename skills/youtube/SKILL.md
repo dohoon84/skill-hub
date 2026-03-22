@@ -2,17 +2,18 @@
 name: youtube
 description: YouTube Data API v3 기반 동영상 검색, 채널/동영상 상세 정보, 트렌딩, 댓글, 재생목록 조회
 enabled: true
-version: 1.0.0
+version: 1.1.0
 author: dohoon84
 tags: video, youtube, media, search
-requires_env: YOUTUBE_API_KEY
+requires_google_auth: true
 ---
 
 ## YouTube 도구
 
 YouTube Data API v3를 사용하여 동영상 검색, 채널 정보, 트렌딩, 댓글, 재생목록을 조회합니다.
 
-> **사전 준비**: [Google Cloud Console](https://console.cloud.google.com/)에서 YouTube Data API v3를 활성화하고 API 키를 `.env` 파일의 `YOUTUBE_API_KEY`에 설정하세요.
+Gmail/Calendar와 동일한 Google OAuth2 인증을 사용합니다. 별도 API 키가 필요 없으며,
+[Google Cloud Console](https://console.cloud.google.com/)에서 **YouTube Data API v3** 를 활성화하기만 하면 됩니다.
 
 ### 사용 가능한 도구
 
@@ -43,12 +44,17 @@ YouTube Data API v3를 사용하여 동영상 검색, 채널 정보, 트렌딩, 
 - **youtube_channel_videos**: 특정 채널의 최근 업로드 동영상 목록 조회
   - 채널 ID 또는 @핸들로 검색 가능
 
+### 사전 준비
+
+1. [Google Cloud Console](https://console.cloud.google.com/) 접속
+2. Gmail/Calendar에서 사용 중인 프로젝트 선택
+3. **API 및 서비스 → 라이브러리** 에서 `YouTube Data API v3` 검색 후 **사용 설정** 클릭
+4. 기존 credentials.json/token.json 그대로 사용 (별도 API 키 불필요)
+
 ### 사용 규칙
 
-- 동영상 ID가 필요한 도구(youtube_video_info, youtube_comments)를 사용할 때는 반드시 youtube_search로 먼저 실제 ID를 확보하세요.
+- youtube_video_info, youtube_comments 사용 시 반드시 youtube_search로 먼저 실제 ID를 확보하세요.
 - youtube_search 결과에서 반환된 `ID: xxxxxxxx` 값을 그대로 다음 도구에 전달하세요. 임의로 ID를 생성하지 마세요.
-- 트렌딩 조회 시 카테고리를 지정하면 더 정확한 결과를 얻을 수 있습니다.
-- 구독자 수가 비공개인 채널은 구독자 수가 표시되지 않습니다.
 
 ### 사용 예시
 
