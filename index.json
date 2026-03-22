@@ -102,15 +102,23 @@
   "apps": [
     {
       "name": "btc_daily_advisor",
-      "description": "매일 오전 BTC/NYSE 뉴스 분석 후 매수/매도 판단 및 알림",
+      "description": "매일 오전 BTC/NYSE 뉴스 분석 후 매수/매도 판단 및 텔레그램 알림",
       "skills": ["web_search", "crypto_price", "news_rss", "finance", "wallstreetbets"],
-      "tags": ["finance", "crypto", "trading"]
+      "schedule": "0 8 * * *",
+      "trigger_keywords": ["비트코인", "BTC", "btc", "코인 분석", "crypto", "암호화폐"],
+      "output_channel": "telegram",
+      "tags": ["finance", "crypto", "trading"],
+      "version": "2.0.0"
     },
     {
       "name": "real_estate_scout",
-      "description": "부동산 매물 탐색, 지역 분석, 삶의 질 점수 리포트",
+      "description": "관심 지역 부동산 매물 탐색, 삶의 질 점수, 기후·환경 종합 리포트 생성",
       "skills": ["geocoding", "quality_of_life", "web_search", "weather", "quickchart"],
-      "tags": ["realestate", "analysis"]
+      "schedule": "",
+      "trigger_keywords": ["부동산", "아파트", "매물", "전세", "월세", "집 구하기", "지역 분석", "이사"],
+      "output_channel": "telegram",
+      "tags": ["realestate", "analysis", "report"],
+      "version": "2.0.0"
     }
   ]
 }
