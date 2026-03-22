@@ -119,6 +119,66 @@
       "output_channel": "telegram",
       "tags": ["realestate", "analysis", "report"],
       "version": "2.0.0"
+    },
+    {
+      "name": "global_economy_briefing",
+      "description": "매일 아침 글로벌 주요 지수, 환율, 암호화폐, 거시경제 지표를 한 번에 정리해 브리핑",
+      "skills": ["finance", "exchange_rate", "crypto_price", "world_bank", "news_rss", "quickchart"],
+      "schedule": "0 7 * * 1-5",
+      "trigger_keywords": ["경제 브리핑", "아침 브리핑", "글로벌 경제", "시장 현황", "오늘 시장"],
+      "output_channel": "telegram",
+      "tags": ["finance", "economy", "briefing", "daily"],
+      "version": "1.0.0"
+    },
+    {
+      "name": "stock_research_report",
+      "description": "특정 미국 주식 종목에 대한 시세·재무제표·커뮤니티 심리·뉴스를 종합한 투자 분석 리포트 생성",
+      "skills": ["finance", "sec_edgar", "wallstreetbets", "web_search", "quickchart"],
+      "schedule": "",
+      "trigger_keywords": ["주식 분석", "종목 분석", "투자 리포트", "stock analysis", "주식 리서치"],
+      "output_channel": "telegram",
+      "tags": ["finance", "stock", "research", "analysis"],
+      "version": "1.0.0"
+    },
+    {
+      "name": "tech_trend_weekly",
+      "description": "매주 월요일 Hacker News·arXiv·YouTube·웹 검색을 통해 지난주 기술 트렌드를 요약 브리핑",
+      "skills": ["hacker_news", "arxiv", "youtube", "web_search", "quickchart"],
+      "schedule": "0 9 * * 1",
+      "trigger_keywords": ["기술 트렌드", "테크 뉴스", "tech trend", "주간 기술", "AI 트렌드", "개발 트렌드"],
+      "output_channel": "telegram",
+      "tags": ["tech", "ai", "news", "weekly", "research"],
+      "version": "1.0.0"
+    },
+    {
+      "name": "city_life_analyzer",
+      "description": "이민·여행·이주 고려 도시들의 삶의 질, 날씨, 대기질, 생활비를 비교 분석하여 시각화",
+      "skills": ["geocoding", "quality_of_life", "weather", "air_quality", "exchange_rate", "quickchart"],
+      "schedule": "",
+      "trigger_keywords": ["도시 비교", "도시 분석", "이민 분석", "이주 추천", "살기 좋은 도시", "city comparison"],
+      "output_channel": "telegram",
+      "tags": ["lifestyle", "travel", "city", "comparison", "quality-of-life"],
+      "version": "1.0.0"
+    },
+    {
+      "name": "travel_prep_assistant",
+      "description": "여행·출장 일정을 기반으로 목적지 날씨, 환율, 현지 공휴일, 준비물 체크리스트를 자동 생성",
+      "skills": ["calendar", "weather", "exchange_rate", "public_holidays", "geocoding", "web_search"],
+      "schedule": "",
+      "trigger_keywords": ["여행 준비", "출장 준비", "여행 체크리스트", "trip prep", "여행 정보", "출장 정보"],
+      "output_channel": "telegram",
+      "tags": ["travel", "trip", "calendar", "checklist", "weather"],
+      "version": "1.0.0"
+    },
+    {
+      "name": "global_risk_monitor",
+      "description": "매일 오전 지진·대기오염·이상기후·재난 뉴스를 수집하여 글로벌 리스크 현황을 모니터링",
+      "skills": ["earthquake", "air_quality", "weather", "news_rss", "web_search"],
+      "schedule": "0 6 * * *",
+      "trigger_keywords": ["글로벌 리스크", "재난 현황", "지진 정보", "대기오염", "이상기후", "리스크 모니터"],
+      "output_channel": "telegram",
+      "tags": ["risk", "safety", "earthquake", "environment", "monitoring"],
+      "version": "1.0.0"
     }
   ]
 }
